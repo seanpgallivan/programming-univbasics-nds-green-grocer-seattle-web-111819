@@ -29,10 +29,13 @@ def consolidate_cart(cart)
         u += 1
         if u == con_cart.length
           con_cart[u] = cart[i]
-          con_cart[u]
+          con_cart[u][:count] = 1
+        end
       end
-    
-        
+    end
+    i += 1
+  end
+  return con_cart      
 end
 
 def apply_coupons(cart, coupons)
