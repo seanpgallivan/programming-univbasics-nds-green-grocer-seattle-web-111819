@@ -20,6 +20,7 @@ def find_item_by_name_in_collection(name, collection)
   nil
 end
 
+
 def consolidate_cart(cart)
   # Consult README for inputs and outputs
   #
@@ -42,10 +43,10 @@ def consolidate_cart(cart)
     end
     i += 1
   end
-  puts con_cart
   return con_cart      
 end
-consolidate_cart(testcart)
+
+
 def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
@@ -55,9 +56,9 @@ def apply_coupons(cart, coupons)
   while c < coupons.length do
     i = 0
     while i < cart.length do
-      if cart[i][:item] == coupon[c][:item] && cart[i][:count] >= coupon[c][:num]
-        coup_cart << {item: cart[i][:item] + " W/COUPON", price: coupon[c][:cost]/coupon[c][:num], clearance: cart[i][:clearance], count: coupon[c][:num]}
-        cart[i][:count] -= coupon[c][:num]
+      if cart[i][:item] == coupons[c][:item] && cart[i][:count] >= coupons[c][:num]
+        coup_cart << {item: cart[i][:item] + " W/COUPON", price: coupons[c][:cost]/coupons[c][:num], clearance: cart[i][:clearance], count: coupons[c][:num]}
+        cart[i][:count] -= coupons[c][:num]
         if cart[i][:count] == 0
           cart.delete_at(i)
         end
