@@ -33,6 +33,7 @@ def consolidate_cart(cart)
       if u == con_cart.length
         con_cart[u] = cart[i]
         con_cart[u][:count] = 1
+        u = con_cart.length
       elsif cart[i][:item] == con_cart[u][:item]
         con_cart[u][:count] += 1
         u = con_cart.length
