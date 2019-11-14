@@ -42,6 +42,14 @@ def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
+  coup_cart = []
+  c = 0
+  while c < coupons.length do
+    i = 0
+    while i < cart.length do
+      if coupon[c][:name] == 
+      
+    
 end
 
 def apply_clearance(cart)
