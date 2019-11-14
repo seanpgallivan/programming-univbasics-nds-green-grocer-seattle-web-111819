@@ -30,8 +30,10 @@ def consolidate_cart(cart)
   while i < cart.length do
     u = 0
     while u <= con_cart.length do
-      
-      if cart[i][:item] == con_cart[u][:item]
+      if u == con_cart.length
+        con_cart[u] = cart[i]
+        con_cart[u][:count] = 1
+      else if cart[i][:item] == con_cart[u][:item]
         con_cart[u][:count] += 1
         u = con_cart.length
       else
