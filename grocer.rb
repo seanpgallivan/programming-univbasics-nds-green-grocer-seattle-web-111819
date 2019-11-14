@@ -59,7 +59,8 @@ def apply_coupons(cart, coupons)
     end
   c += 1
   end
-  
+  cart.concat(coup_cart)
+  return cart
 end
 
 def apply_clearance(cart)
