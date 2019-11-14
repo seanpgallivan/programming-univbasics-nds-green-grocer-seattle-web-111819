@@ -1,11 +1,3 @@
- testcart = [
-      {:item => "AVOCADO", :price => 3.00, :clearance => true},
-      {:item => "KALE", :price => 3.00, :clearance => false},
-      {:item => "BLACK_BEANS", :price => 2.50, :clearance => false},
-      {:item => "AVOCADO", :price => 3.00, :clearance => true}
-    ]
-
-
 def find_item_by_name_in_collection(name, collection)
   # Implement me first!
   #
@@ -59,9 +51,6 @@ def apply_coupons(cart, coupons)
       if cart[i][:item] == coupons[c][:item] && cart[i][:count] >= coupons[c][:num]
         coup_cart << {item: cart[i][:item] + " W/COUPON", price: coupons[c][:cost]/coupons[c][:num], clearance: cart[i][:clearance], count: coupons[c][:num]}
         cart[i][:count] -= coupons[c][:num]
-#        if cart[i][:count] == 0
-#          cart.delete_at(i)
-#        end
         i = cart.length
       end
       i += 1
