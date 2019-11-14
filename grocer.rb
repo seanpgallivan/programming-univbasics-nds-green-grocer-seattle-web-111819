@@ -25,9 +25,8 @@ def consolidate_cart(cart)
   #
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
-  con_cart = []
+  con_cart[1][:count] = 1
   i = 0
-  puts cart.length
   while i < cart.length do
     u = 0
     while u < con_cart.length do
