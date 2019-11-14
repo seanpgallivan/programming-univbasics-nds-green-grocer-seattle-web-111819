@@ -1,3 +1,11 @@
+ testcart = [
+      {:item => "AVOCADO", :price => 3.00, :clearance => true},
+      {:item => "KALE", :price => 3.00, :clearance => false},
+      {:item => "BLACK_BEANS", :price => 2.50, :clearance => false},
+      {:item => "AVOCADO", :price => 3.00, :clearance => true}
+    ]
+
+
 def find_item_by_name_in_collection(name, collection)
   # Implement me first!
   #
@@ -35,9 +43,10 @@ def consolidate_cart(cart)
     end
     i += 1
   end
+  puts con_cart
   return con_cart      
 end
-
+consolidate_cart(testcart)
 def apply_coupons(cart, coupons)
   # Consult README for inputs and outputs
   #
