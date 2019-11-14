@@ -49,7 +49,6 @@ def apply_coupons(cart, coupons)
     while i < cart.length do
       if cart[i][:item] == coupon[c][:item] && cart[i][:count] >= coupon[c][:num]
         cart[i][:count] -= coupon[c][:num]
-        coup_cart << {
         if cart[i][:count] == 0
           cart.delete_at(i)
         end
