@@ -48,7 +48,7 @@ def apply_coupons(cart, coupons)
     i = 0
     while i < cart.length do
       if cart[i][:item] == coupon[c][:item] && cart[i][:count] >= coupon[c][:num]
-        coup_cart << {item: cart[i][:item] + " W/COUPON", price: 
+        coup_cart << {item: cart[i][:item] + " W/COUPON", price: coupon[c][:cost]/coupon[c][:num], clearance: cart[i][:clearance], count: coupon[c][:num]}
         cart[i][:count] -= coupon[c][:num]
         if cart[i][:count] == 0
           cart.delete_at(i)
@@ -57,8 +57,9 @@ def apply_coupons(cart, coupons)
       end
       i += 1
     end
-      
-    
+  c += 1
+  end
+  
 end
 
 def apply_clearance(cart)
