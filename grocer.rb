@@ -47,7 +47,9 @@ def apply_coupons(cart, coupons)
   while c < coupons.length do
     i = 0
     while i < cart.length do
-      if coupon[c][:name] == 
+      if cart[i][:item] == coupon[c][:item] && cart[i][:count] >= coupon[c][:num]
+        if cart[i][:count] > coupon[c][:num]
+          cart[i][:count]
       
     
 end
